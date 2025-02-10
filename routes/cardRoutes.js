@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', cardController.getAllCards);
 router.get('/:id', cardController.getCardById);
 router.post('/', authenticate, cardController.createCard);
-router.put('/:id', authenticate, cardController.updateCard); // הוספת אימות
-router.delete('/:id', authenticate, cardController.deleteCard); // הוספת אימות
+router.put('/:id', authenticate, cardController.updateCard); 
+router.delete('/:id', authenticate, cardController.deleteCard); 
 
 module.exports = router;
