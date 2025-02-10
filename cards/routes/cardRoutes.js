@@ -1,6 +1,6 @@
 const express = require('express');
 const cardController = require('../controllers/cardController');
-const authenticate = require('../middleware/auth');
+const authenticate = require('../../auth/providers/auth');
 const router = express.Router();
 
 router.get('/', cardController.getAllCards);

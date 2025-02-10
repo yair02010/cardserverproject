@@ -1,5 +1,5 @@
                 const Card = require('../models/card');
-                const logger = require('../utils/logger');
+                const logger = require('../../utils/logger');
                 exports.getAllCards = async (req, res) => {
                     try {
                         const cards = await Card.find();
