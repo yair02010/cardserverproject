@@ -2,45 +2,16 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
     name: {
-        firstname: {
-            type: String,
-            required: true,
-        },
-        middleName: {
-            type: String,
-            required: false,
-        },
-        lastname: {
-            type: String,
-            required: true,
-        },
+        firstname: { type: String, required: true },
+        middleName: { type: String, required: false },
+        lastname: { type: String, required: true },
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    password: {
-        type: String,
-        required: true,
-        minlength: 8,
-    },
-    phone: {
-        type: String,
-        required: true,
-        minlength: 10,
-        maxlength: 10,
-    },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true, minlength: 8 },
+    phone: { type: String, required: true },
     image: {
-        url: {
-            type: String,
-            required: true,
-            match: /^https?:\/\/.*\.(?:png|jpg)$/,
-        },
-        alt: {
-            type: String,
-            required: false,
-        },
+        url: { type: String, required: true },
+        alt: { type: String, required: false },
     },
     address: {
         state: { type: String, required: true, match: /^[a-zA-Z]+$/ },
@@ -50,15 +21,8 @@ const userSchema = new mongoose.Schema({
         zip: { type: String, required: true, match: /^[0-9]+$/ },
         homeNum: { type: String, required: true, match: /^[0-9]+$/ },
     },
-    isBusiness: {
-        type: Boolean,
-        default: false,
-    },
-    isAdmin: {
-        type: Boolean,
-        default: false,
-    },
+    isBusiness: { type: Boolean, default: false },
+    isAdmin: { type: Boolean, default: false },
 }, { timestamps: true });
-
 
 module.exports = mongoose.model("User", userSchema);
