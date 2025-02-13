@@ -17,7 +17,7 @@ This project is a **REST API** for managing business cards. The application allo
 1. Clone the repository:
    ```sh
    git clone https://github.com/your-repo-link.git
-   cd your-project-folder
+   cd your-project-folder](https://github.com/yair02010/cardserverproject.git
    ```
 2. Install dependencies:
    ```sh
