@@ -89,5 +89,5 @@ On first run, three default users and three default business cards are created:
 - Advanced analytics for business card interactions.
 
 ---
-📌 **Developed as part of a Full-Stack course final project.** 🚀
+📌 **Developed as part of a Full-Stack course.** 🚀
 
